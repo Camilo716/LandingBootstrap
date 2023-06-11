@@ -1,0 +1,95 @@
+*{
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0.6;}
+    100% {opacity: 1;}
+}
+
+h2{
+    font-size: 5vh;
+    margin-top: 3%;
+    text-align: center;
+    letter-spacing: 0.3vh;
+
+}
+
+h3{
+    font-size: 3vh;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--colorText);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vh;
+
+    position: relative;
+
+    opacity: 0;
+    animation: fadeIn ease-in-out 0.5s forwards;
+}
+
+.backIcon{
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    width: 5vh;
+    height: 5vh;
+}
+
+.servicesHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicesGallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.serviceImg{
+    width: 50vh;
+}
+
+.service{
+    text-align: center;
+}
+
+
+.actions{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    background-color: #3b3b3b;
+    width: 30vh;
+    margin: 0 5vh;
+    height: 90%;
+    font-size: 180%;
+    color: white;
+    padding: 2vh;
+    border-radius: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+button:hover{
+    background-color: black;
+    transition: ease 0.5s;
+}
+

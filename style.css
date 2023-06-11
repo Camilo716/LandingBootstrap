@@ -1,0 +1,497 @@
+:root{
+    --first-color:#f3f3f3;
+    --secondColor:rgb(7, 7, 7);
+    --colorBackground1: #180E0E;
+    --buttonColor: #745E5D;
+    --colorText: #ffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    opacity: 0;
+    animation: fadeIn ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0.6;}
+    100% {opacity: 1;}
+}
+
+h1{
+    color: var(--colorText);
+    font-size: 10vh;
+    text-align: center;
+}
+
+h2{
+    font-size: 5vh;
+    padding: 7vh;
+}
+
+h3{
+    font-size: 3vh;
+    margin: 2vh;
+}
+
+p{
+    font-size: 3vh;
+}
+
+/* Comienzo sección barra de navegación */
+
+nav{
+    width: 100%;
+    background-color: var(--secondColor) ;
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    position: fixed;
+    z-index: 2;
+    border-bottom: solid var(--colorText) 0.1vh;
+}
+
+.homeIcon{
+    width: 4vh;
+    height: 4vh;
+    stroke-width: 0.1vh;
+}
+
+.navContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-right: solid var(--colorText) 0.2vh;
+}
+
+.navLink{
+    font-size: 2.1vh;
+    letter-spacing: 0.3vh;
+    text-decoration: none;
+    color: var(--colorText);
+}
+
+.navLink:hover{
+    color: gray;
+    transition: ease-in all 0.2s;
+}
+
+/* Comienzo seccion encabezado */
+
+header{
+    background-image: url("./img/banner.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+
+    color: var(--colorText);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+}
+
+header::before {
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.options{
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+    gap: 0.6vh;  
+}
+
+.options a{
+    color: var(--buttonColor);
+    font-size: 1.7vh;
+}
+
+.mainTittle{
+    position: relative;
+    z-index: 1;
+    padding-top: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Comienzo sección de servicios */
+
+.SERVICES{
+    height: 100vh;
+    background-color: var(--colorText);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicesHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servicesGallery{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.serviceImg{
+    width: 50vh;
+}
+
+.service{
+    text-align: center;
+}
+
+/* Comienzo sección de productos */
+
+.productTittle{
+    text-align: center;
+    color: var(--first-color);
+}
+
+.PRODUCTS{
+    background-image: url("./img/banner.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.PRODUCTS::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.container{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vh;
+    margin: auto;
+}
+
+.box{
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    overflow: hidden;
+    margin: 2vh;
+    border-radius: 1vh;
+    box-shadow: 0vh 1.5vh 1vh;
+    cursor: pointer;
+}
+
+.imgProduct{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.imgProduct:hover{
+    transform: scale(9);
+}
+
+.capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity:0 ;
+    transition: 0.5s ease;
+    color: var(--first-color);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.capa:hover{
+    position: absolute;
+    opacity: 2;
+}
+
+.productActions{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartLink{
+    background-color: var(--colorText);
+    border: solid var(--colorText) 0;
+
+    font-size: 2vh;
+    font-weight: 600;
+    color: var(--secondColor);
+    margin: 3vh;
+    height: 5vh;
+    width: 30vh;
+    border-radius: 1vh;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.cartLink:hover{
+    border: solid var(--colorText) 0.2vh;
+    background-color: transparent;
+    transition: ease-in all 0.2s;
+    color: var(--colorText);
+}
+
+.cartIcon{
+    height: 5vh;
+    width: 5vh;
+}
+
+/* Comienzo seccion de clientes */
+
+.CLIENTS{
+    background-color: var(--first-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.clientsTittle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.carrousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clientsGallery{
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    overflow-x: auto;
+}
+
+.clientImg{
+    height: 55vh;
+    padding: 0 3vh;
+}
+
+.arrowIcon{
+    width: 15vh;
+    height: 15vh;
+}
+
+/* Inicio seccion de barberos */
+
+.BARBERS{
+    height: 100vh;
+    background-image: url("./img/banner.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+    
+    color: var(--colorText);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.BARBERS::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: -1;
+}
+
+.barbersTittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barbersContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.barber{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+}
+
+.barberName{
+    margin: 2vh auto;
+    color: rgb(216, 216, 216);
+}
+
+.barberImg{
+    width: 40%;
+    margin: auto;
+}
+
+.barberDescription{
+    font-size: 2.5vh;
+    margin: 2vh auto;
+    color: gb(216, 216, 216);
+    text-align: center;
+}
+
+.barberActions{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agendarCita{
+    background-color: var(--colorText);
+    border: solid var(--colorText) 0;
+
+    font-size: 2vh;
+    font-weight: 600;
+    color: var(--secondColor);
+    margin: 3vh;
+    height: 5vh;
+    width: 30vh;
+    border-radius: 1vh;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.agendarCita:hover{
+    border: solid var(--colorText) 0.2vh;
+    background-color: transparent;
+    transition: ease-in all 0.2s;
+    color: var(--colorText);
+}
+
+/* Inicio seccion de contacto  */
+
+.CONTACT{
+    height: 100vh;
+    background-color: var(--colorText);
+    
+    color: var(--secondColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactTittle{
+    display: flex;
+    justify-content: center;
+    align-items: center   
+}
+
+.contactContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.map{
+    height: 65vh;
+    width: 65vh;
+}
+
+.contactData{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dataRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3vh 0;
+}
+
+.dataLogo{
+    width: 7vh;
+    margin: 0 3vh;
+}
+
+.dataDescription{
+    font-size: 4vh;
+    letter-spacing: 0.5vh;
+    font-weight: bold;
+}
